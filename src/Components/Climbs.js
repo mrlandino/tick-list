@@ -1,9 +1,10 @@
 import React from 'react';
 import Climb from './Climb';
 import Form from './Form'
+import FilterBar from './FIlterBar'
 import '../styles/Climbs.scss'
 
-export default function Climbs({allClimbs}) {
+export default function Climbs({allClimbs, filterClimbs}) {
   const climbCards = allClimbs.map(climb => {
     return (
       <Climb
@@ -12,16 +13,20 @@ export default function Climbs({allClimbs}) {
         key={climb.id}
         grade={climb.grade}
         location={climb.location}
+        completed={climb.completed}
         />
     )
   })
 
   return (
-    <div className='main-container'>
-      <div className="climbs-container">
-        {climbCards}
+    <div>
+      <FilterBar filterClimbs={filterClimbs}/>
+      <div className='main-container'>
+        <div className="climbs-container">
+          {climbCards}
+        </div>
+        <Form /> 
       </div>
-      <Form /> 
     </div>
   )
 }

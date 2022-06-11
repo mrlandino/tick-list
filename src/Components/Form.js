@@ -5,7 +5,8 @@ export default function Form() {
     const [name, setName] = useState('')
     const [location, setLocation] = useState('')
     const [grade, setGrade] = useState('')
-    // const [name, setName] = useState('')
+    const [video, setVideo] = useState('')
+    
 
     const handleChangeName = (event) => {
       setName(event.target.value)
@@ -17,6 +18,10 @@ export default function Form() {
 
     const handleChangeGrade = (event) => {
       setGrade(event.target.value)
+    }
+
+    const handleChangeVideo = (event) => {
+      setVideo(event.target.value)
     }
 
     const addClimb = (event) => {
@@ -45,21 +50,29 @@ export default function Form() {
                 value= {name}
                 onChange={event => handleChangeName(event)}
             />
+
+              <select className="dropdown-filter-input" onChange={event => handleChangeLocation(event)} value={location}>
+                <option tabIndex="0" className="type-hover" value="none">-Select Location-</option>
+                <option tabIndex="0" className="type-hover" value="Boone, NC">Boone, NC</option>
+                <option tabIndex="0" className="type-hover" value="RockTown, GA">RockTown, GA</option>
+                <option tabIndex="0" className="type-hover" value="Chatanooga, TN">Chatanooga, TN</option>
+              </select>
               <input
-                type= 'text'
-                placeholder= 'Location'
-                name= 'location'
-                value= {location}
-                onChange={event => handleChangeLocation(event)}
-            />
-              <input
-                type= 'text'
-                placeholder= 'Grade'
+                type= 'number'
+                min="0"
+                placeholder= 'V Grade'
                 name= 'grade'
                 value= {grade}
                 onChange={event => handleChangeGrade(event)}
             />
-            <button className= 'climb-button' onClick={event => addClimb(event)}>Add New Climb</button>
+            <input
+                type= 'text'
+                placeholder= 'Video URL'
+                name= 'video'
+                value= {video}
+                onChange={event => handleChangeVideo(event)}
+            />
+            <button className= 'climb-button' onClick={event => addClimb(event)}>Add Climb</button>
           </form>
     )
 }
