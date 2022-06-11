@@ -10,6 +10,7 @@ import '../styles/App.scss'
 export default function App() {
   const [allClimbs, setAllClimbs] = useState([])
   const [allFilteredClimbs, setAllFilteredClimbs] = useState('')
+  const [noClimbs, setNoClimbs] = useState(false)
   const [error, setError] = useState(false)
 
   useEffect(() =>{
@@ -19,7 +20,7 @@ export default function App() {
   },[])
 
   const filterClimbs = (location, grade, completed) => {
-    console.log(location, grade, completed)
+    // console.log(location, grade, completed)
     let updateClimbs = allClimbs;
     if(location) {
       updateClimbs = updateClimbs.filter(climb => {
@@ -29,7 +30,7 @@ export default function App() {
 
     if(grade) {
       updateClimbs = updateClimbs.filter(climb => {
-        console.log(climb.grade, grade)
+        // console.log(climb.grade, grade)
         return climb.grade === Number(grade);
        })
     }
@@ -45,7 +46,13 @@ export default function App() {
         return climb.completed === true;
        })
     }
-    
+
+    if(updateClimbs.length === 0) {
+      setNoClimbs(true)
+    }else if (updateClimbs.length > 0) {
+      setNoClimbs(false)
+    }
+    // console.log(updateClimbs)
     setAllFilteredClimbs(updateClimbs)
   }
   
@@ -53,13 +60,20 @@ export default function App() {
     setError(false)
   }
 
+  const updateCompletedData = (climb, checked) => {
+    console.log('UPDATEDATA')
+    console.log(climb.id, checked, allClimbs[climb.id -1])
+    setAllClimbs(allClimbs.map(climb1 => climb1.id === climb.id ? {...climb1, completed: checked} : climb1))
+  }
+
   return (
     <main className="main-content">
       <Nav />
-      {!allFilteredClimbs && (<Route exact path="/" render= {() => <Climbs allClimbs={allClimbs} filterClimbs={filterClimbs}/>} />)}
-      {allFilteredClimbs && (<Route exact path="/" render= {() => <Climbs allClimbs={allFilteredClimbs} filterClimbs={filterClimbs}/>} />)}
+      {!allFilteredClimbs && (<Route exact path="/" render= {() => <Climbs allClimbs={allClimbs} filterClimbs={filterClimbs} noClimbs={noClimbs} />} />)}
+      {allFilteredClimbs && (<Route exact path="/" render= {() => <Climbs allClimbs={allFilteredClimbs} filterClimbs={filterClimbs} noClimbs={noClimbs} />} />)}
+      
       <Route exact path='/:id' render={({ match }) => {
-          return <ClimbDetails currentClimb={match.params.id} allClimbs={allClimbs}/>
+          return <ClimbDetails currentClimb={match.params.id} allClimbs={allClimbs} updateCompletedData={updateCompletedData}/>
         }} />
     </main>
   )

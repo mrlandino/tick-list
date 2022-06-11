@@ -1,18 +1,18 @@
 .filter-bar {
   display: flex;
-  // justify-content: center;
+  justify-content: center;
   margin-top: 15vh;
-  margin-left: 350px;
+  // margin-left: 170px;
   // justify-content: space-around;
   input {
     text-align: center;
     height: 5vh;
     width: 5vw;
-    font-size: 20px;
+    font-size: 1.2vw;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
   }
   .dropdown-filter-input {
-    font-size: 20px;
+    font-size: 1.2vw;
     text-align: center;
     height: 5vh;
     width: 20vw;
@@ -21,14 +21,17 @@
     border-radius: 10px;
   }
   .select-grade {
-    font-size: 20px;
+    font-size: 1.2vw;
     // margin: 20px
   }
   button {
     margin: 15px;
-    width: 15vw;
+    width: 11vw;
     height: 5vh;
     border-radius: 30px;
+    background-color: white;
+    border: none;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
   
     &:hover {
       cursor: pointer;

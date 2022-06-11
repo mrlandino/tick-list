@@ -11,12 +11,15 @@
 }
 
 .card-container {
+    border: solid red 3px;
   position: absolute;
   display: flex;
+  flex-direction: column-reverse;
   justify-content: space-around;
   align-items: center;
+  margin-top: 15vh;
   z-index: 2;
-  height: 100vh;
+  height: 84vh;
   width: 100vw;
 
   .video-container {
@@ -24,9 +27,10 @@
       justify-content: center;
       align-items: center;
       padding: 20px;
-      margin-top: 40px;
-      height: 400px;
-      width: 700px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      height: 60vh;
+      width: 60vw;
       background-color: rgba(78, 80, 86, 0.7);
       backdrop-filter: blur(5px);
       border-radius: 8px;
@@ -41,9 +45,10 @@
   
   .climb-details {
       display: flex;
-      flex-direction: column;
-      height: 400px;
-      width: 700px;
+      justify-content: space-around;
+    //   flex-direction: column;
+      height: 5vh;
+      width: 60vw;
       padding: 20px;
       margin-top: 40px;
       background-color: rgba(78, 80, 86, 0.7);
@@ -54,29 +59,21 @@
       
       h2 {
           color: white;
-          text-align: center;
-          font-size: 40px;
+        //   text-align: center;
+          font-size: 3vw;
           z-index: 5;
       }
 
+      p {
+          font-size: 1.7vw
+      }
       
-      div {
-          display: flex;
-          flex-direction: row;
-          height:70%;
-          width: 100%;
-          
-          img {
-              height:100%;
-              width: 45%;
-              margin: 10px;
-          }
-          
-          .overview {
-              font-size: 20px;
-              padding: 7px;
-              text-align:justify;
-          }
+      input {
+          width: 2vw;
+      }
+
+      label {
+          font-size: 1.7vw;
       }
     }
 }

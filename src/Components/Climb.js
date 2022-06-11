@@ -9,8 +9,8 @@ export default function Climb({name, id, grade, location, completed}) {
       <div className="climb">
         <div className="climb-text">
           <h3>{name}</h3>
-          <p>{`V${grade}`}</p>
           <p>{location}</p>
+          <p>{`V${grade}`}</p>
           {completed ? <p className='completed'>Completed</p> : <p className='project'>Project</p>}
         </div>
       </div>

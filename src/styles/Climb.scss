@@ -2,9 +2,9 @@
   display: flex;
   color: rgb(64, 45, 45);
   padding: 20px;
-  font-size: 22px;
+  font-size: 1vw, 1vh;
   text-align: center;
-  width: 20vw;
+  width: 15vw;
   height: 15vh;
   margin: 2vh 1.5vw;
 
@@ -24,26 +24,33 @@
     height: 15vh;
     margin-bottom: 10px;
     h3 {
-      font-size: 30px;
-      margin-bottom: 10px;
+      font-size: 1.7vw;
+      // margin-bottom: 10px;
     }
   }
 
-  input {
-    border: solid 3px red;
-    margin-top: 100px;
-    // margin-left: 50px;
-    padding: 0;
-    height: 20px;
-    z-index: 5;
-  }
+  // input {
+  //   border: solid 3px red;
+  //   margin-top: 100px;
+  //   // margin-left: 50px;
+  //   padding: 0;
+  //   height: 20px;
+  //   z-index: 5;
+  // }
   .completed {
-    margin-top: 15px;
+    margin-top: 5px;
     color: green;
   }
   .project {
-    margin-top: 15px;
+    margin-top: 5px;
     color: red;
   }
+
+}
+.no-climbs{
+  color: white;
+  font-size: 2vw;
+  margin-top: 50px;
+
 }
 
