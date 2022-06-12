@@ -50,6 +50,7 @@ export default function Form({addNewClimb}) {
           <form className='climb-form'>
               <h2>Add New Climb</h2>
               <input
+                className='input-name'
                 type= 'text'
                 placeholder= 'Name'
                 name= 'name'
