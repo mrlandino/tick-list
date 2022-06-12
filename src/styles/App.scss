@@ -1,0 +1,29 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+main {
+  // border: solid 3px blue;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-image: url('./BlackForest-Germany-GettyImages-147180370.webp') ;
+  background-size: cover;
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
+}
+
+.error {
+  margin-top: 15%;
+  text-align: center;
+  color: white;
+  font-size: 35px;
+  z-index: 3;
+}

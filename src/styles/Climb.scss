@@ -1,0 +1,56 @@
+.climb {
+  display: flex;
+  color: rgb(64, 45, 45);
+  padding: 20px;
+  font-size: 1vw, 1vh;
+  text-align: center;
+  width: 15vw;
+  height: 15vh;
+  margin: 2vh 1.5vw;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+  background-color: rgba(255, 255, 255, .5);
+  backdrop-filter: blur(5px);
+  z-index: 0;
+  border-radius: 15px;
+  
+  .climb-text {
+    // border: solid 3px red;
+    width: 100vw;
+    height: 15vh;
+    margin-bottom: 10px;
+    h3 {
+      font-size: 1.7vw;
+      // margin-bottom: 10px;
+    }
+  }
+  .completed {
+    margin-top: 5px;
+    color: green;
+  }
+  .project {
+    margin-top: 5px;
+    color: red;
+  }
+  
+
+}
+.no-climbs{
+  color: white;
+  font-size: 2vw;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 390px) {
+  .climb {
+    width: 80vw;
+    .climb-text {
+      width: 100vw;
+      text-align: center;
+      h3 {
+        font-size: 8vw;
+      }
+    }
+  }
+
+}
+

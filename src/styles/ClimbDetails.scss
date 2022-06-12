@@ -1,0 +1,134 @@
+.climb-details-container {
+  display: flex;
+  position: relative;
+}
+
+.backdrop {
+  height: 100vh;
+  width: 100vw;
+  z-index: 0;
+  position: absolute;
+}
+
+.card-container {
+    // border: solid red 3px;
+  position: absolute;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 15vh;
+  z-index: 2;
+  height: 84vh;
+  width: 100vw;
+
+  .video-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      height: 60vh;
+      width: 60vw;
+      background-color: rgba(78, 80, 86, 0.7);
+      backdrop-filter: blur(5px);
+      border-radius: 8px;
+      box-shadow: 10px 12px 15px rgba(0, 0, 0, 0.25);
+
+      iframe {
+          height: 95%;
+          width: 95%;
+          border-radius: 8px;
+      }
+  }
+  
+  .climb-details {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    //   flex-direction: column;
+      height: 5vh;
+      width: 60vw;
+      padding: 20px;
+      margin-top: 40px;
+      background-color: rgba(78, 80, 86, 0.7);
+      backdrop-filter: blur(5px);
+      border-radius: 8px;
+      box-shadow: 10px 12px 15px rgba(0, 0, 0, 0.25);
+      color: white;
+      
+      h2 {
+          color: white;
+        //   text-align: center;
+          font-size: 3vw;
+          z-index: 5;
+      }
+
+      p {
+          font-size: 1.5vw;
+          text-align: center;
+      }
+      .completed-container {
+        display: flex;
+        align-items: center;
+          input {
+              width: 2vw;
+            //   text-align: center;
+          }
+    
+          label {
+              font-size: 1.7vw;
+              text-align: center;
+          }
+      }
+      
+      .delete-button {
+        border: none;
+        width: 6vw;
+        height: 2vh;
+        border-radius: 30px;
+        margin-top: 5px;
+        font-size: 1.2vw;
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
+        background-color: white;
+        z-index: 5;
+      }
+    }
+}
+
+@media screen and (max-width: 390px) {
+    
+    .card-container {
+        .climb-details {
+            flex-direction: column;
+            height: 10vh;
+            width: 60vw;  
+            h2 {
+                color: white;
+            //   text-align: center;
+                font-size: 6vw;
+                z-index: 5;
+            }
+
+            p {
+                font-size: 3vw;
+                text-align: center;
+            }
+            .completed-container {
+            display: flex;
+            align-items: center;
+                input {
+                    width: 5vw;
+                    height: 2.5vh;
+                //   text-align: center;
+                }
+        
+                label {
+                    font-size: 3vw;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
