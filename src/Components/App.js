@@ -20,7 +20,6 @@ export default function App() {
   },[])
 
   const filterClimbs = (location, grade, completed) => {
-    // console.log(location, grade, completed)
     let updateClimbs = allClimbs;
     if(location) {
       updateClimbs = updateClimbs.filter(climb => {
@@ -30,7 +29,6 @@ export default function App() {
 
     if(grade) {
       updateClimbs = updateClimbs.filter(climb => {
-        // console.log(climb.grade, grade)
         return climb.grade === Number(grade);
        })
     }
@@ -52,13 +50,9 @@ export default function App() {
     }else if (updateClimbs.length > 0) {
       setNoClimbs(false)
     }
-    // console.log(updateClimbs)
+
     setAllFilteredClimbs(updateClimbs)
   }
-  
-  // const updateError = () => {
-  //   setError(false)
-  // }
 
   const updateCompletedData = (climb, checked) => {
     setAllClimbs(allClimbs.map(climb1 => climb1.id === climb.id ? {...climb1, completed: checked} : climb1))
