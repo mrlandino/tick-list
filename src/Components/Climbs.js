@@ -15,7 +15,7 @@ export default function Climbs({allClimbs, filterClimbs, noClimbs, addNewClimb, 
         grade={climb.grade}
         location={climb.location}
         completed={climb.completed}
-        // deleteClimb={deleteClimb}
+        deleteClimb={deleteClimb}
         />
     )
   })

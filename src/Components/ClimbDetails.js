@@ -23,7 +23,7 @@ const updateCompleted = (event) => {
 
 const handleDelete = () => {
   console.log(Number(climb.id))
-  deleteClimb(Number(climb.id))
+  deleteClimb({"id": Number(climb.id)})
 }
 
   return (
