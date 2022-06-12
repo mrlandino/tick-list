@@ -42,13 +42,13 @@ const handleDelete = () => {
           <section className="climb-details">
             <h2 className="climb-name">{climb.name}</h2>
             <div>
-              <p>{climb.location}</p>
-              <p>{`V${climb.grade}`}</p>
+              <p className='climb-location'>{climb.location}</p>
+              <p className='climb-grade'>{`V${climb.grade}`}</p>
 
             </div>
             <div className="completed-container">
               <label>Completed</label>
-              <input type='checkbox' onChange={updateCompleted} checked={!!climb.completed}/>
+              <input className='completed-input' type='checkbox' onChange={updateCompleted} checked={!!climb.completed}/>
               {/* <button className='delete-button' onClick={handleDelete}>Delete</button> */}
             </div>
           </section>

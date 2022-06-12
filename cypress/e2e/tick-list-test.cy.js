@@ -42,9 +42,42 @@ describe('App', () => {
     cy.get('.search-button').click()
     cy.get('.climb').should('have.length', 3)
     cy.get('.reset-button').click()
+
+    cy.get('.dropdown-filter-input2').select('Boone, NC')
+    cy.get('.dropdown-filter-input1').select('completed')
+    cy.get('.select-grade-input').clear()
+    cy.get('.select-grade-input').type('5')
+    cy.get('.search-button').click()
+    cy.get('.climb').should('have.length', 3)
   })
 
   it('should be able to add a climb from the form', () => {
-   
+    cy.get('.input-name').type('Twisted Sister')
+    cy.get('.input-grade').type('5')
+    cy.get('.dropdown-filter-input-location').select('Boone, NC')
+    cy.get('.input-url').type('https://www.youtube.com/embed/6E1bhQurjkc')
+    cy.get('.climb-button').click()
+    cy.get('.climb').should('have.length', 12)
+    cy.get('a').children('div').contains('Twisted Sister')
   })
+
+  it('should be able to click on a climb tile and move to climb details with beta video', () => {
+    cy.get('.climb').first().click()
+    cy.url().should('include', '/0')
+    cy.get('.climb-name').contains('Throttle')
+    
+  })
+
+})
+
+describe('Climb Details Page', () => {
+  beforeEach(() => {
+    cy.visit('https://tick-list-app.herokuapp.com/')
+    cy.intercept('GET', 'https://tick-list-api.herokuapp.com/api/v1/climbs', {fixture: 'climbList'}).as('climbList')
+    cy.intercept('PATCH', 'https://tick-list-api.herokuapp.com/api/v1/climbs', {fixture: 'patchClimb'}).as('patchClimb')
+    cy.intercept('POST', 'https://tick-list-api.herokuapp.com/api/v1/climbs', {fixture: 'postClimb'}).as('postClimb')
+    cy.intercept('GET', 'https://tick-list-api.herokuapp.com/api/v1/climbs', 'https://tick-list-app.herokuapp.com//error')
+  })
+
+
 })
