@@ -31,12 +31,12 @@ export default function FilterBar({filterClimbs}) {
   }
   return (
         <div className="filter-bar">
-            <select className="dropdown-filter-input" onChange={handleCompleted} value={completed}>
+            <select className="dropdown-filter-input1" onChange={handleCompleted} value={completed}>
               <option tabIndex="0" className="type-hover" value="">All Climbs</option>
               <option tabIndex="0" className="type-hover" value="completed">Completed</option>
               <option tabIndex="0" className="type-hover" value="project">Projects</option>
             </select>
-            <select className="dropdown-filter-input" onChange={handleLocation} value={location}>
+            <select className="dropdown-filter-input2" onChange={handleLocation} value={location}>
               <option tabIndex="0" className="type-hover" value="">All Locations</option>
               <option tabIndex="0" className="type-hover" value="Boone, NC">Boone, NC</option>
               <option tabIndex="0" className="type-hover" value="RockTown, GA">RockTown, GA</option>
