@@ -29,5 +29,22 @@ describe('App', () => {
     cy.get('.dropdown-filter-input1').select('completed')
     cy.get('.search-button').click()
     cy.get('.climb').should('have.length', 7)
+
+    cy.get('.reset-button').click()
+    cy.get('.climb').should('have.length', 11)
+
+    cy.get('.dropdown-filter-input2').select('RockTown, GA')
+    cy.get('.search-button').click()
+    cy.get('.climb').should('have.length', 1)
+    cy.get('.reset-button').click()
+
+    cy.get('.select-grade-input').type('5')
+    cy.get('.search-button').click()
+    cy.get('.climb').should('have.length', 3)
+    cy.get('.reset-button').click()
+  })
+
+  it('should be able to add a climb from the form', () => {
+   
   })
 })

@@ -11,6 +11,6 @@
     { "id": "7", "name": "CigArete", "grade": 7, "location": "Boone, NC", "completed": true, "video": "https://www.youtube.com/embed/TvUIbnyIN_U"},
     { "id": "8", "name": "Instinct", "grade": 8, "location": "Boone, NC", "completed": false, "video": "https://www.youtube.com/embed/IIGKHidFReo"},
     { "id": "9", "name": "Macheesemo", "grade": 8, "location": "Boone, NC", "completed": false},
-    { "id": "10", "name": "Zen Master", "grade": 8, "location": "Boone, NC", "completed": true, "video": "https://www.youtube.com/embed/6E1bhQurjkc"}
+    { "id": "10", "name": "Zen Master", "grade": 8, "location": "RockTown, GA", "completed": true, "video": "https://www.youtube.com/embed/6E1bhQurjkc"}
   ]
 }

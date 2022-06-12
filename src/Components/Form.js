@@ -57,13 +57,14 @@ export default function Form({addNewClimb}) {
                 onChange={event => handleChangeName(event)}
             />
 
-              <select className="dropdown-filter-input" onChange={event => handleChangeLocation(event)} value={location}>
+              <select className="dropdown-filter-input-location" onChange={event => handleChangeLocation(event)} value={location}>
                 <option tabIndex="0" className="type-hover" value="none">-Select Location-</option>
                 <option tabIndex="0" className="type-hover" value="Boone, NC">Boone, NC</option>
                 <option tabIndex="0" className="type-hover" value="RockTown, GA">RockTown, GA</option>
                 <option tabIndex="0" className="type-hover" value="Chatanooga, TN">Chatanooga, TN</option>
               </select>
               <input
+                className='input-grade'
                 type= 'number'
                 min="0"
                 placeholder= 'V Grade'
@@ -72,6 +73,7 @@ export default function Form({addNewClimb}) {
                 onChange={event => handleChangeGrade(event)}
             />
             <input
+                className='input-url'
                 type= 'text'
                 placeholder= 'Vid URL(no quotes)'
                 name= 'video'
