@@ -3,7 +3,7 @@ import { Route, Redirect } from 'react-router-dom'
 import Climbs from './Climbs'
 import Nav from './Nav'
 import ClimbDetails from './ClimbDetails'
-import { getClimbs } from '../apiCalls'
+import { getClimbs, postClimb } from '../apiCalls'
 import '../styles/App.scss'
 
 
@@ -61,16 +61,24 @@ export default function App() {
   }
 
   const updateCompletedData = (climb, checked) => {
-    console.log('UPDATEDATA')
-    console.log(climb.id, checked, allClimbs[climb.id -1])
+    // console.log('UPDATEDATA')
+    // console.log(climb.id, checked, allClimbs[climb.id -1])
     setAllClimbs(allClimbs.map(climb1 => climb1.id === climb.id ? {...climb1, completed: checked} : climb1))
+    if (allFilteredClimbs) {
+      setAllFilteredClimbs(allFilteredClimbs.map(climb1 => climb1.id === climb.id ? {...climb1, completed: checked} : climb1))
+    }
+  }
+
+  const addNewClimb = (newClimb) => {
+    console.log(newClimb)
+    postClimb(newClimb)
   }
 
   return (
     <main className="main-content">
       <Nav />
-      {!allFilteredClimbs && (<Route exact path="/" render= {() => <Climbs allClimbs={allClimbs} filterClimbs={filterClimbs} noClimbs={noClimbs} />} />)}
-      {allFilteredClimbs && (<Route exact path="/" render= {() => <Climbs allClimbs={allFilteredClimbs} filterClimbs={filterClimbs} noClimbs={noClimbs} />} />)}
+      {!allFilteredClimbs && (<Route exact path="/" render= {() => <Climbs allClimbs={allClimbs} filterClimbs={filterClimbs} noClimbs={noClimbs} addNewClimb={addNewClimb}/>} />)}
+      {allFilteredClimbs && (<Route exact path="/" render= {() => <Climbs allClimbs={allFilteredClimbs} filterClimbs={filterClimbs} noClimbs={noClimbs} addNewClimb={addNewClimb} />} />)}
       
       <Route exact path='/:id' render={({ match }) => {
           return <ClimbDetails currentClimb={match.params.id} allClimbs={allClimbs} updateCompletedData={updateCompletedData}/>

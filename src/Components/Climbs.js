@@ -4,7 +4,7 @@ import Form from './Form'
 import FilterBar from './FIlterBar'
 import '../styles/Climbs.scss'
 
-export default function Climbs({allClimbs, filterClimbs, noClimbs}) {
+export default function Climbs({allClimbs, filterClimbs, noClimbs, addNewClimb}) {
   const climbCards = allClimbs.map(climb => {
     return (
       <Climb
@@ -26,7 +26,7 @@ export default function Climbs({allClimbs, filterClimbs, noClimbs}) {
           {climbCards}
           {noClimbs && (<p className='no-climbs'>Sorry none of your climbs fit that criteria</p>)}
         </div>
-        <Form /> 
+        <Form addNewClimb={addNewClimb}/> 
       </div>
     </div>
   )

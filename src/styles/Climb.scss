@@ -7,14 +7,9 @@
   width: 15vw;
   height: 15vh;
   margin: 2vh 1.5vw;
-
-
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
   background-color: rgba(255, 255, 255, .5);
   backdrop-filter: blur(5px);
-  // background-image: url('./');
-  // background-color: rgba(82, 96, 116, 0.6);
-  // backdrop-filter: blur(5px);
   z-index: 0;
   border-radius: 15px;
   
@@ -28,15 +23,6 @@
       // margin-bottom: 10px;
     }
   }
-
-  // input {
-  //   border: solid 3px red;
-  //   margin-top: 100px;
-  //   // margin-left: 50px;
-  //   padding: 0;
-  //   height: 20px;
-  //   z-index: 5;
-  // }
   .completed {
     margin-top: 5px;
     color: green;
@@ -51,6 +37,20 @@
   color: white;
   font-size: 2vw;
   margin-top: 50px;
+
+}
+
+@media screen and (max-width: 390px) {
+  .climb {
+    width: 80vw;
+    .climb-text {
+      width: 100vw;
+      text-align: center;
+      h3 {
+        font-size: 8vw;
+      }
+    }
+  }
 
 }
 

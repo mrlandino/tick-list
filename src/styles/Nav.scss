@@ -10,10 +10,7 @@ nav {
   position: absolute;
   padding-left: 5vw;
   font-size: 4vw;
-  // background-color: rgba(69, 85, 108, 0.7);
   background-image: linear-gradient(to top, rgba(214, 207, 116, 0.602), rgba(47, 54, 61, 0.572)),url('./header stone.jpeg');
-
-  // backdrop-filter: blur(5px);
   height: 15vh;
   width: 95vw;
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
@@ -21,7 +18,7 @@ nav {
 
   div {
     display: flex;
-    justify-content: row;
+    justify-content: row;;
 
     h1 {
       color: white;
@@ -41,6 +38,23 @@ nav {
       cursor: pointer;
       transform: scale(1.1);
       -webkit-filter: brightness(1.2);
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  nav {
+    // border: solid red 3px;
+    height: 10vh;
+    width: 96vw;
+    font-size: 7vw;
+   
+    button {
+      padding-top: 7px;
+      font-size: 6vw;
+      align-items: center;
+      justify-content: space-between;
+      margin-right: 50px;
     }
   }
 }

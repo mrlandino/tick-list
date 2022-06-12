@@ -1,7 +1,8 @@
 import React, { useState }  from 'react'
 import '../styles/Form.scss'
 
-export default function Form() {
+
+export default function Form({addNewClimb}) {
     const [name, setName] = useState('')
     const [location, setLocation] = useState('')
     const [grade, setGrade] = useState('')
@@ -27,10 +28,13 @@ export default function Form() {
     const addClimb = (event) => {
         event.preventDefault()
         const newClimb = {
-            id: Date.now(),
-            ...this.state
+           "name": name,
+           "grade": Number(grade),
+           "location": location,
+           "video": video
         }
-        addClimb(newClimb)
+        console.log(video)
+        addNewClimb(newClimb)
         clearInputs()
     }
     
@@ -38,6 +42,7 @@ export default function Form() {
         setName('')
         setLocation('')
         setGrade('')
+        setVideo('')
     }
 
     return (
@@ -67,7 +72,7 @@ export default function Form() {
             />
             <input
                 type= 'text'
-                placeholder= 'Video URL'
+                placeholder= 'Vid URL(no quotes)'
                 name= 'video'
                 value= {video}
                 onChange={event => handleChangeVideo(event)}

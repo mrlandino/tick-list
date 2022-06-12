@@ -22,6 +22,7 @@
   }
   .select-grade {
     font-size: 1.2vw;
+    border-radius: 10px;
     // margin: 20px
   }
   button {
@@ -41,4 +42,33 @@
     }
   }
 
+}
+
+@media screen and (max-width: 390px) {
+ .filter-bar {
+  margin-top: 10vh;
+    input {
+      height: 5vh;
+      width: 10vw;
+      font-size: 2vw;
+      margin: 10px;
+    
+    }
+    .dropdown-filter-input {
+      font-size: 3vw;
+      height: 5vh;
+      width: 20vw;
+      margin: 10px;
+    
+    }
+    .select-grade-input {
+      font-size: 3vw;
+      // margin: 20px
+    }
+    button {
+      width: 11vw;
+      height: 5vh;
+      margin: 10px;
+    }
+  }
 }

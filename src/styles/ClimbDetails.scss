@@ -11,7 +11,7 @@
 }
 
 .card-container {
-    border: solid red 3px;
+    // border: solid red 3px;
   position: absolute;
   display: flex;
   flex-direction: column-reverse;
@@ -46,6 +46,7 @@
   .climb-details {
       display: flex;
       justify-content: space-around;
+      align-items: center;
     //   flex-direction: column;
       height: 5vh;
       width: 60vw;
@@ -65,16 +66,57 @@
       }
 
       p {
-          font-size: 1.7vw
+          font-size: 1.5vw;
+          text-align: center;
       }
-      
-      input {
-          width: 2vw;
-      }
-
-      label {
-          font-size: 1.7vw;
+      .completed-container {
+        display: flex;
+        align-items: center;
+          input {
+              width: 2vw;
+            //   text-align: center;
+          }
+    
+          label {
+              font-size: 1.7vw;
+              text-align: center;
+          }
       }
     }
 }
 
+@media screen and (max-width: 390px) {
+    
+    .card-container {
+        .climb-details {
+            flex-direction: column;
+            height: 10vh;
+            width: 60vw;  
+            h2 {
+                color: white;
+            //   text-align: center;
+                font-size: 6vw;
+                z-index: 5;
+            }
+
+            p {
+                font-size: 3vw;
+                text-align: center;
+            }
+            .completed-container {
+            display: flex;
+            align-items: center;
+                input {
+                    width: 5vw;
+                    height: 2.5vh;
+                //   text-align: center;
+                }
+        
+                label {
+                    font-size: 3vw;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
