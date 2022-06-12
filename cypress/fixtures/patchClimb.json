@@ -1,8 +1,8 @@
 
 [
-  { "id": "0", "name": "Throttle", "grade": 5, "location": "Boone, NC", "completed": true, "video": "https://www.youtube.com/embed/HUdjfUDeB50"},
+  { "id": "0", "name": "Throttle", "grade": 5, "location": "Boone, NC", "completed": false, "video": "https://www.youtube.com/embed/HUdjfUDeB50"},
   { "id": "1", "name": "Mighty Mouse", "grade": 5, "location": "Boone, NC", "completed": true, "video": "https://www.youtube.com/embed/CVsG-cT0bPk"},
-  { "id": "2", "name": "Sunday Survice", "grade": 11, "location": "Boone, NC", "completed": true, "video": "https://www.youtube.com/embed/FrBCev1KUME"},
+  { "id": "2", "name": "Sunday Survice", "grade": 11, "location": "Boone, NC", "completed": false, "video": "https://www.youtube.com/embed/FrBCev1KUME"},
   { "id": "3", "name": "Jason Lives", "grade": 9, "location": "Boone, NC", "completed": false},
   { "id": "4", "name": "Doug Reed Roof", "grade": 5, "location": "Boone, NC", "completed": true, "video": "https://www.youtube.com/embed/drWqSW33TyA"},
   { "id": "5", "name": "Druid Roof", "grade": 7, "location": "Boone, NC", "completed": true, "video": "https://www.youtube.com/embed/i2unNre4xO0"},
