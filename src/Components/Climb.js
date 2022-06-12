@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/Climb.scss';
 import { NavLink } from 'react-router-dom';
-// import { SassColor } from 'sass';
+import PropTypes from 'prop-types';
 
 export default function Climb({name, id, grade, location, completed}) {
   
@@ -17,4 +17,12 @@ export default function Climb({name, id, grade, location, completed}) {
       </div>
     </NavLink>
   )
+}
+
+Climb.propTypes = {
+  name: PropTypes.string,
+  id: PropTypes.string,
+  grade: PropTypes.number,
+  location: PropTypes.string,
+  completed: PropTypes.bool
 }

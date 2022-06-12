@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import '../styles/FilterBar.scss'
-// import { Route, NavLink } from 'react-router-dom'
+import PropTypes from 'prop-types';
 
 export default function FilterBar({filterClimbs}) {
   const [location, setLocation] = useState('')
@@ -8,22 +8,18 @@ export default function FilterBar({filterClimbs}) {
   const [completed, setCompleted] = useState('')
   
   const handleLocation = (event) => {
-    // console.log(event.target.value)
     setLocation(event.target.value)
   }
 
   const handleGrade = (event) => {
-    // console.log(event.target.value)
     setGrade(event.target.value)
   }
 
   const handleCompleted = (event) => {
-    // console.log(event.target.value)
     setCompleted(event.target.value)
   }
 
   const updatePage = () => {
-    // console.log(location, grade, completed)
     filterClimbs(location, grade, completed)
   }
 
@@ -53,4 +49,8 @@ export default function FilterBar({filterClimbs}) {
           <button className="reset-button" onClick={resetFilters}>Reset All</button>
         </div>
   )
+}
+
+FilterBar.propTypes = {
+  filterClimbs: PropTypes.func
 }

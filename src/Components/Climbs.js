@@ -3,6 +3,7 @@ import Climb from './Climb';
 import Form from './Form'
 import FilterBar from './FIlterBar'
 import '../styles/Climbs.scss'
+import PropTypes from 'prop-types';
 
 export default function Climbs({allClimbs, filterClimbs, noClimbs, addNewClimb, deleteClimb}) {
   const climbCards = allClimbs.map(climb => {
@@ -14,7 +15,7 @@ export default function Climbs({allClimbs, filterClimbs, noClimbs, addNewClimb, 
         grade={climb.grade}
         location={climb.location}
         completed={climb.completed}
-        deleteClimb={deleteClimb}
+        // deleteClimb={deleteClimb}
         />
     )
   })
@@ -31,4 +32,12 @@ export default function Climbs({allClimbs, filterClimbs, noClimbs, addNewClimb, 
       </div>
     </div>
   )
+}
+
+Climbs.propTypes = {
+  allClimbs: PropTypes.array,
+  filterClimbs: PropTypes.func,
+  noClimbs: PropTypes.bool,
+  addNewClimb: PropTypes.func,
+  deleteClimb: PropTypes.func
 }

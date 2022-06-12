@@ -1,5 +1,6 @@
 import React, { useState }  from 'react'
 import '../styles/Form.scss'
+import PropTypes from 'prop-types';
 
 
 export default function Form({addNewClimb}) {
@@ -82,3 +83,6 @@ export default function Form({addNewClimb}) {
     )
 }
 
+Form.propTypes = {
+  addNewClimb: PropTypes.func
+}

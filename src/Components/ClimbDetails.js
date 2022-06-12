@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import '../styles/ClimbDetails.scss'
+import PropTypes from 'prop-types';
 
 export default function ClimbDetails({currentClimb, allClimbs, updateCompletedData, patchClimbChange,deleteClimb}) {
 const [climb, setClimb] = useState({name:'test', grade:'test', location:'test', video:''})
@@ -18,7 +19,6 @@ const updateCompleted = (event) => {
   setClimb({...climb, completed: event.target.checked})
   updateCompletedData(climb, event.target.checked)
   patchClimbChange({"completed": event.target.checked, "id": Number(climb.id)})
-  //patch database to reflect completed change
 }
 
 const handleDelete = () => {
@@ -55,4 +55,12 @@ const handleDelete = () => {
       </div>
     </div>
   )
+}
+
+ClimbDetails.propTypes = {
+  currentClimb: PropTypes.string,
+  allClimbs: PropTypes.array,
+  updateCompletedData: PropTypes.func,
+  patchClimbChange: PropTypes.func,
+  deleteClimb: PropTypes.func
 }
