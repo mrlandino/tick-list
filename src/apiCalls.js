@@ -24,5 +24,30 @@ const postClimb = (climbPosting) => {
     )
 }
 
+const patchClimb = (patchClimb) => {
+    return (
+        fetch('https://tick-list-api.herokuapp.com/api/v1/climbs', {
+            method: "PATCH",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(patchClimb)
+        })
+        .then(response => response.json())
+    )
+}
 
-export { getClimbs, postClimb }
+const deleteSelectedClimb = (deleteClimb) => {
+    return (
+        fetch('https://tick-list-api.herokuapp.com/api/v1/climbs', {
+            method: "DELETE",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(deleteClimb)
+        })
+        .then(response => response.json())
+    )
+}
+
+export { getClimbs, postClimb, patchClimb, deleteSelectedClimb }

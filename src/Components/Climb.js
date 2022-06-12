@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 // import { SassColor } from 'sass';
 
 export default function Climb({name, id, grade, location, completed}) {
+  
   return (
     <NavLink to={`/${id}`} style={{ textDecoration: 'none' }}>
       <div className="climb">

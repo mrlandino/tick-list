@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import '../styles/ClimbDetails.scss'
 
-export default function ClimbDetails({currentClimb, allClimbs, updateCompletedData}) {
+export default function ClimbDetails({currentClimb, allClimbs, updateCompletedData, patchClimbChange,deleteClimb}) {
 const [climb, setClimb] = useState({name:'test', grade:'test', location:'test', video:''})
 
 useEffect(() => {
@@ -17,7 +17,13 @@ useEffect(() => {
 const updateCompleted = (event) => {
   setClimb({...climb, completed: event.target.checked})
   updateCompletedData(climb, event.target.checked)
+  patchClimbChange({"completed": event.target.checked, "id": Number(climb.id)})
   //patch database to reflect completed change
+}
+
+const handleDelete = () => {
+  console.log(Number(climb.id))
+  deleteClimb(Number(climb.id))
 }
 
   return (
@@ -43,6 +49,7 @@ const updateCompleted = (event) => {
             <div className="completed-container">
               <label>Completed</label>
               <input type='checkbox' onChange={updateCompleted} checked={!!climb.completed}/>
+              <button className='delete-button' onClick={handleDelete}>Delete</button>
             </div>
           </section>
       </div>

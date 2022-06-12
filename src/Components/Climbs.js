@@ -4,7 +4,7 @@ import Form from './Form'
 import FilterBar from './FIlterBar'
 import '../styles/Climbs.scss'
 
-export default function Climbs({allClimbs, filterClimbs, noClimbs, addNewClimb}) {
+export default function Climbs({allClimbs, filterClimbs, noClimbs, addNewClimb, deleteClimb}) {
   const climbCards = allClimbs.map(climb => {
     return (
       <Climb
@@ -14,6 +14,7 @@ export default function Climbs({allClimbs, filterClimbs, noClimbs, addNewClimb})
         grade={climb.grade}
         location={climb.location}
         completed={climb.completed}
+        deleteClimb={deleteClimb}
         />
     )
   })
