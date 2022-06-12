@@ -49,7 +49,7 @@ const handleDelete = () => {
             <div className="completed-container">
               <label>Completed</label>
               <input type='checkbox' onChange={updateCompleted} checked={!!climb.completed}/>
-              <button className='delete-button' onClick={handleDelete}>Delete</button>
+              {/* <button className='delete-button' onClick={handleDelete}>Delete</button> */}
             </div>
           </section>
       </div>

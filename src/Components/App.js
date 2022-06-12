@@ -56,9 +56,9 @@ export default function App() {
     setAllFilteredClimbs(updateClimbs)
   }
   
-  const updateError = () => {
-    setError(false)
-  }
+  // const updateError = () => {
+  //   setError(false)
+  // }
 
   const updateCompletedData = (climb, checked) => {
     setAllClimbs(allClimbs.map(climb1 => climb1.id === climb.id ? {...climb1, completed: checked} : climb1))
@@ -89,12 +89,13 @@ export default function App() {
   return (
     <main className="main-content">
       <Nav />
+      {error && <Redirect to="/error" />}
       {!allFilteredClimbs && (<Route exact path="/" render= {() => <Climbs allClimbs={allClimbs} filterClimbs={filterClimbs} noClimbs={noClimbs} addNewClimb={addNewClimb} />} />)}
       {allFilteredClimbs && (<Route exact path="/" render= {() => <Climbs allClimbs={allFilteredClimbs} filterClimbs={filterClimbs} noClimbs={noClimbs} addNewClimb={addNewClimb} />} />)}
-      
-      <Route exact path='/:id' render={({ match }) => {
-          return <ClimbDetails currentClimb={match.params.id} allClimbs={allClimbs} updateCompletedData={updateCompletedData} patchClimbChange={patchClimbChange} deleteClimb={deleteClimb}/>
-        }} />
+      <Route exact path="/error" render= {() => <h3 className='error'>Something went wrong, Please try again later.</h3>} />
+      {!error && (<Route exact path='/:id' render={({ match }) => {
+          return <ClimbDetails currentClimb={match.params.id} allClimbs={allClimbs} updateCompletedData={updateCompletedData} patchClimbChange={patchClimbChange} deleteClimb={deleteClimb} />
+        }} />)}
     </main>
   )
 }
