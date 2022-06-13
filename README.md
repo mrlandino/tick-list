@@ -9,6 +9,7 @@ This is a single user application for rock climbers to store their favorite clim
 
 - [Authors](#authors)
 - [Tech Stack](#tech-stack)
+- [Goals](#goals)
 - [API Reference](#api-reference)
 - [GIFs](#gifs)
 - [Deployment](#deployment)
@@ -16,25 +17,29 @@ This is a single user application for rock climbers to store their favorite clim
 
 ## Authors
 
-- [Ross Landino @mrlandino](https://www.github.com/mrlandino)
-
+- [Ross Landino](https://www.github.com/mrlandino)
 
 
 ## Tech Stack
   - React
   - React Router
   - Javascript
-  - HTML
   - SCSS
   - Cypress
   - Express/Node.js
   - Webpack
   - NPM
 
+## Goals
+- Build React app in short sprint with specific specs.
+- Implement React Router to handle multiple views and navigation.
+- Make the application design responsive to various screen sizes.
+- Build a back end API with Express and display the data from it.
+- Build out end-to-end testing using Cypress.
 
 ## API Reference
 
-[Express API](https://github.com/mrlandino/tick-list-api/blob/main/README.md)
+- [Express API](https://github.com/mrlandino/tick-list-api/blob/main/README.md)
 
 ## GIFs
 
