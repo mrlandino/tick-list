@@ -4,6 +4,7 @@
 
 This is a single user application for rock climbers to store their favorite climbs in a "tick list". Users are able to check their climbs off the list as completed as well as be able to see "beta" videos showing them how to do the climbs. Users can also add additional climbs to their tick list. 
 
+![App Details Page](https://github.com/mrlandino/tick-list/blob/main/public/Climb%20Details.png)
 ## Table of Contents
 
 - [Authors](#authors)
@@ -33,7 +34,7 @@ This is a single user application for rock climbers to store their favorite clim
 
 ## API Reference
 
-[Express Server](https://github.com/mrlandino/tick-list-api/blob/main/README.md)
+[Express API](https://github.com/mrlandino/tick-list-api/blob/main/README.md)
 
 ## GIFs
 
