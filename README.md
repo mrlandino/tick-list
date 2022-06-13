@@ -1,8 +1,8 @@
 # Tick List
 
-![App Front Page](./public/main-screen.png)
+![App Front Page](./public/main screen.png)
 
-A movie database application where users can browse various movies and view details/info about the movie along with official cinematic trailers and teasers.
+This is a single user application for rock climbers to store their favorite climbs in a "tick list". Users are able to check their climbs off the list as completed as well as be able to see "beta" videos showing them how to do the climbs. Users can also add additional climbs to their tick list. 
 
 ## Table of Contents
 
@@ -18,7 +18,7 @@ A movie database application where users can browse various movies and view deta
 ## Authors
 
 - [Ross Landino @mrlandino](https://www.github.com/mrlandino)
-- [Zachary Saile @zwsaile](https://www.github.com/zwsaile)
+
 
 
 ## Tech Stack
