@@ -43,7 +43,8 @@ This is a single user application for rock climbers to store their favorite clim
 
 ## GIFs
 
-GIFs coming soon. . . . 
+![Tick List Gighy](https://user-images.githubusercontent.com/92144256/173274876-18306a52-7f28-43c6-9475-dbd0e3b06351.gif)
+
 
 
 ## Deployment
