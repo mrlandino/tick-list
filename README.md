@@ -1,6 +1,6 @@
 # Tick List
 
-![App Front Page](./public/main screen.png)
+![App Front Page](./public/Main Page.png)
 
 This is a single user application for rock climbers to store their favorite climbs in a "tick list". Users are able to check their climbs off the list as completed as well as be able to see "beta" videos showing them how to do the climbs. Users can also add additional climbs to their tick list. 
 
