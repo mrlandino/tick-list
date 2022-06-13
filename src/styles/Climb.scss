@@ -14,13 +14,11 @@
   border-radius: 15px;
   
   .climb-text {
-    // border: solid 3px red;
     width: 100vw;
     height: 15vh;
     margin-bottom: 10px;
     h3 {
       font-size: 1.7vw;
-      // margin-bottom: 10px;
     }
   }
   .completed {
@@ -31,9 +29,8 @@
     margin-top: 5px;
     color: red;
   }
-  
-
 }
+
 .no-climbs{
   color: white;
   font-size: 2vw;
@@ -51,6 +48,5 @@
       }
     }
   }
-
 }
 

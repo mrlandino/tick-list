@@ -1,14 +1,14 @@
 const getClimbs = () => {
-  return (
-      fetch('https://tick-list-api.herokuapp.com/api/v1/climbs')
-          .then(response => {
-          if(response.ok) {
-              return response.json();
-          } else {
-              throw new Error();
-          }
-      }) 
-  )
+    return (
+        fetch('https://tick-list-api.herokuapp.com/api/v1/climbs')
+            .then(response => {
+            if(response.ok) {
+                return response.json();
+            } else {
+                throw new Error();
+            }
+        }) 
+    )
 }
 
 const postClimb = (climbPosting) => {

@@ -2,8 +2,7 @@
   display: flex;
   justify-content: center;
   margin-top: 15vh;
-  // margin-left: 170px;
-  // justify-content: space-around;
+
   input {
     text-align: center;
     height: 5vh;
@@ -21,11 +20,11 @@
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
   }
-  .select-grade {
+  .select-grade-input {
     font-size: 1.2vw;
     border-radius: 10px;
-    // margin: 20px
   }
+  
   button {
     margin: 15px;
     width: 11vw;
@@ -39,10 +38,8 @@
       cursor: pointer;
       background-color: rgba(115, 145, 186, 0.6);
       color: white;
-  
     }
   }
-
 }
 
 @media screen and (max-width: 390px) {
@@ -53,18 +50,16 @@
       width: 10vw;
       font-size: 2vw;
       margin: 10px;
-    
     }
-    .dropdown-filter-input {
+    .dropdown-filter-input1,
+    .dropdown-filter-input2 {
       font-size: 3vw;
       height: 5vh;
       width: 20vw;
       margin: 10px;
-    
     }
     .select-grade-input {
       font-size: 3vw;
-      // margin: 20px
     }
     button {
       width: 11vw;

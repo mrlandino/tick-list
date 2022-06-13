@@ -1,11 +1,9 @@
 .main-container {
-  // border: solid 3px red;
   display: flex;
   flex-direction: row;
   overflow-y: hidden;
   overflow-x: hidden;
   width: 100vw;
-  // margin-right: 20px;
   padding: 20px;
   padding-top: 0;
 
@@ -13,13 +11,9 @@
     display: none;
     overflow: hidden;
   }
-  // height: 100vh;
-  // margin-top: 17.5vh;
 }
 
-
 .climbs-container {
-  // border: solid 3px red;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -28,12 +22,9 @@
   height: 72vh;
   overflow-y: auto;
   padding-bottom: 25px;
-  // margin-top: 10%;
   
-  // margin-top: 17.5vh;
   &::-webkit-scrollbar{
     display: none;
-    // overflow: hidden;
   }
 }
 
@@ -45,14 +36,10 @@
   }
 
   .climbs-container {
-    // border: solid 3px red;
     height: 25vh;
     width: 91vw;
     flex-wrap: nowrap;
     justify-content: space-between;
     padding: 15px;
-    // padding-left: 400px;
-    // padding-right: 50px;
   }
-
 }
