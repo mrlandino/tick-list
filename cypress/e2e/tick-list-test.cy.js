@@ -9,7 +9,6 @@ describe('App', () => {
 
   it('should load main page with title', () => {
     cy.get('nav').find('h1').contains('Tick List')
-    
   })
 
   it('should load main page by fetching all climbs on tick list', () => {
@@ -71,6 +70,5 @@ describe('App', () => {
     cy.get('.home').click()
     
   })
-
 })
 
