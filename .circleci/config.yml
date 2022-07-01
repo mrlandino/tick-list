@@ -1,16 +1,7 @@
 version: 2.1
-jobs:
+orbs:
+  cypress: cypress-io/cypress@1
+workflows:
   build:
-    docker:
-      - image: alpine:3.15
-    steps:
-      - checkout
-      - run:
-          name: The First Step
-          command: |
-            echo 'Hello World!'
-            echo 'This is the delivery pipeline'
-      - run:
-          name: The Second Step
-          command: |
-            npm run cypress
+    jobs:
+      - cypress/run 
