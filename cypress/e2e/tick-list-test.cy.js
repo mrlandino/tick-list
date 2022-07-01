@@ -1,10 +1,10 @@
 describe('App', () => {
   beforeEach(() => {
-    cy.visit('https://tick-list-app.herokuapp.com/')
     cy.intercept('GET', 'https://tick-list-api.herokuapp.com/api/v1/climbs', {fixture: 'climbList'}).as('climbList')
     cy.intercept('PATCH', 'https://tick-list-api.herokuapp.com/api/v1/climbs', {fixture: 'patchClimb'}).as('patchClimb')
     cy.intercept('POST', 'https://tick-list-api.herokuapp.com/api/v1/climbs', {fixture: 'postClimb'}).as('postClimb')
     cy.intercept('GET', 'https://tick-list-api.herokuapp.com/api/v1/climbs', 'https://tick-list-app.herokuapp.com//error')
+    cy.visit('https://tick-list-app.herokuapp.com/')
   })
 
   it('should load main page with title', () => {
