@@ -13,4 +13,4 @@ jobs:
       - run:
           name: The Second Step
           command: |
-            cypress/run
+            npm run cypress
